@@ -33,10 +33,10 @@ Systolic = st.number_input("Systolic BP", 80, 200, 172)
 Diastolic = st.number_input("Diastolic BP", 50, 130, 86)
 
 # Continent and Country One-Hot
-continent = st.selectbox("Continent", ["Asia", "Australia", "Europe", "North America", "South America"])
-country = st.selectbox("Country", ["Australia", "Brazil", "Canada", "China", "Colombia", "France", "Germany", "India", "Italy",
-                                   "Japan", "New Zealand", "Nigeria", "South Africa", "South Korea", "Spain", "Thailand",
-                                   "United Kingdom", "United States", "Vietnam"])
+# continent = st.selectbox("Continent", ["Asia", "Australia", "Europe", "North America", "South America"])
+# country = st.selectbox("Country", ["Australia", "Brazil", "Canada", "China", "Colombia", "France", "Germany", "India", "Italy",
+#                                    "Japan", "New Zealand", "Nigeria", "South Africa", "South Korea", "Spain", "Thailand",
+#                                    "United Kingdom", "United States", "Vietnam"])
 
 # Convert inputs into a single dictionary
 data = {
@@ -55,26 +55,26 @@ data = {
     "Medication Use": int(Medication),
     "Stress Level": Stress_Level,
     "Sedentary Hours Per Day": Sedentary,
-    "Income": Income,
+    # "Income": Income,
     "BMI": BMI,
     "Triglycerides": Triglycerides,
     "Physical Activity Days Per Week": Physical_Activity,
     "Sleep Hours Per Day": Sleep,
     "Systolic": Systolic,
     "Diastolic": Diastolic,
-    "Continent_Asia": int(continent == "Asia"),
-    "Continent_Australia": int(continent == "Australia"),
-    "Continent_Europe": int(continent == "Europe"),
-    "Continent_North America": int(continent == "North America"),
-    "Continent_South America": int(continent == "South America"),
-    "Hemisphere_Southern Hemisphere": 0,  # Optional logic here if needed
+    # "Continent_Asia": int(continent == "Asia"),
+    # "Continent_Australia": int(continent == "Australia"),
+    # "Continent_Europe": int(continent == "Europe"),
+    # "Continent_North America": int(continent == "North America"),
+    # "Continent_South America": int(continent == "South America"),
+    # "Hemisphere_Southern Hemisphere": 0,  # Optional logic here if needed
 }
 
 # One-hot encode country
-all_countries = ["Australia", "Brazil", "Canada", "China", "Colombia", "France", "Germany", "India", "Italy", "Japan",
-                 "New Zealand", "Nigeria", "South Africa", "South Korea", "Spain", "Thailand", "United Kingdom", "United States", "Vietnam"]
-for c in all_countries:
-    data[f"Country_{c}"] = int(country == c)
+# all_countries = ["Australia", "Brazil", "Canada", "China", "Colombia", "France", "Germany", "India", "Italy", "Japan",
+#                  "New Zealand", "Nigeria", "South Africa", "South Korea", "Spain", "Thailand", "United Kingdom", "United States", "Vietnam"]
+# for c in all_countries:
+#     data[f"Country_{c}"] = int(country == c)
 
 if st.button("Predict"):
     input_array = np.array([data[key] for key in sorted(data.keys())]).reshape(1, -1)
