@@ -19,10 +19,10 @@ st.write("""
           
         **ML Model**  
         
-        **Ensemble Method** 
-           ***Random Forest***
-           ***XGBoost Classifier***
-           ***Logistic Regression*** 
+        **Ensemble Method**  
+           ***Random Forest***  
+           ***XGBoost Classifier***  
+           ***Logistic Regression***
         """)
 st.write("""
         To **Preview Dataset and Visualizations** and to test a new sample, please select a page from the **left pane**.
