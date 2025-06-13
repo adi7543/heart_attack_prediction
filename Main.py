@@ -18,11 +18,7 @@ st.write("""
         The target variable, **Heart Attack Risk**, is binary (**0 = No Risk, 1 = At Risk**).  
           
         **ML Model**  
-        
-        **Ensemble Method**  
-           ***Random Forest***  
-           ***XGBoost Classifier***  
-           ***Logistic Regression***
+        Random Forest
         """)
 st.write("""
         To **Preview Dataset and Visualizations** and to test a new sample, please select a page from the **left pane**.
