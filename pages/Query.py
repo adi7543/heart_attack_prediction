@@ -79,4 +79,4 @@ data = {
 if st.button("Predict"):
     input_array = np.array([data[key] for key in sorted(data.keys())]).reshape(1, -1)
     result = model.predict(input_array)
-    st.success(f"Prediction: {result}")
+    st.success(f"Prediction: {result[0]}")
