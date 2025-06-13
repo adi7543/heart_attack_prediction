@@ -26,11 +26,11 @@ Stress_Level = st.number_input("Stress Level (0=Low, 10=High)", 0, 10)
 Sedentary = st.number_input("Sedentary Hours Per Day", 0.0, 24.0, 7.79)
 # Income = st.number_input("Income", 0, 1000000, 241339)
 BMI = st.number_input("BMI", 10.0, 50.0, 20.14)
-Triglycerides = st.number_input("Triglycerides", 50, 1000, 795)
+Triglycerides = st.number_input("Triglycerides", 50, 1000, 300)
 Physical_Activity = st.slider("Physical Activity Days Per Week", 0, 7, 5)
 Sleep = st.slider("Sleep Hours Per Day", 0, 24, 10)
-Systolic = st.number_input("Systolic BP", 80, 200, 172)
-Diastolic = st.number_input("Diastolic BP", 50, 130, 86)
+Systolic = st.number_input("Systolic BP", 80, 200, 150)
+Diastolic = st.number_input("Diastolic BP", 50, 130, 70)
 
 # Continent and Country One-Hot
 # continent = st.selectbox("Continent", ["Asia", "Australia", "Europe", "North America", "South America"])
@@ -79,4 +79,4 @@ data = {
 if st.button("Predict"):
     input_array = np.array([data[key] for key in sorted(data.keys())]).reshape(1, -1)
     result = model.predict(input_array)
-    st.success(f"Prediction: {result[0]}")
+    st.success(f"Prediction: {result}")
