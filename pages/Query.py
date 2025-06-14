@@ -5,7 +5,7 @@ import numpy as np
 # Load the trained model
 model = joblib.load("model.pkl")
 
-st.title("Heart Disease Risk Prediction")
+st.title("Heart Attack Risk Prediction")
 
 # Input fields (you can customize layout)
 Age = st.number_input("Age", 1, 100, 54)
